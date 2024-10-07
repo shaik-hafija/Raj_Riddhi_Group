@@ -9,9 +9,8 @@ const app = express();
 // Middleware for parsing incoming request bodies
 app.use(bodyParser.json());
 app.use(cors({
-    origin: ["https://raj-riddhi-group-3di4.vercel.app"],
-    methods: ["POST", "GET"],
-    credentials: true  }));
+    origin: '*' // You can also specify the frontend URL here if it's running on a specific domain or port
+  }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB connection string
