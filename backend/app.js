@@ -9,14 +9,14 @@ const app = express();
 // Middleware for parsing incoming request bodies
 app.use(bodyParser.json());
 app.use(cors({
-    origin:["https://raj-riddhi-group-jet.vercel.app"],
+    origin:["https://raj-riddhi-group-api1.vercel.app"],
     methods:["post","get"],
     credentials:true
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB connection string
-const MONGO_URI = 'mongodb+srv://hafijashaik7876:gtL5Qi18C7M0oFOa@cluster0.pkpht.mongodb.net/Tepnoty_Users_Data?retryWrites=true&w=majority';
+const url = "mongodb+srv://gofood:mlRWAjwjIoCKM3TP@cluster0.5qbblkc.mongodb.net/suppliersDB?retryWrites=true&w=majority&appName=Cluster0/suppliersDB";
 
 // Connect to MongoDB
 mongoose.connect(MONGO_URI, {
