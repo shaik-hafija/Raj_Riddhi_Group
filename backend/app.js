@@ -16,10 +16,10 @@ app.use(cors({
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB connection string
-const url = "mongodb+srv://gofood:mlRWAjwjIoCKM3TP@cluster0.5qbblkc.mongodb.net/suppliersDB?retryWrites=true&w=majority&appName=Cluster0/suppliersDB";
+const MONGO_URI = 'mongodb+srv://hafijashaik7876:gtL5Qi18C7M0oFOa@cluster0.pkpht.mongodb.net/Tepnoty_Users_Data?retryWrites=true&w=majority';
 
 // Connect to MongoDB
-mongoose.connect(url, {
+mongoose.connect(MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
