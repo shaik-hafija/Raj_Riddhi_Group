@@ -9,10 +9,8 @@ const app = express();
 // Middleware for parsing incoming request bodies
 app.use(bodyParser.json());
 app.use(cors({
-    origin:["https://raj-riddhi-group-api1.vercel.app"],
-    methods:["post","get"],
-    credentials:true
-}));
+    origin: '*' // You can also specify the frontend URL here if it's running on a specific domain or port
+  }));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // MongoDB connection string
@@ -66,10 +64,7 @@ app.get('/contact_get', async (req, res) => {
         res.status(500).json({ message: 'Error fetching contacts' });
     }
 });
-app.get("/",(req,res)=>
-{
-    res.json("Hello");
-})
+
 
 // Start the server
 const PORT = process.env.PORT || 3000;
