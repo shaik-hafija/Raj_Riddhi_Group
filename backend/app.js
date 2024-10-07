@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 const url = "mongodb+srv://gofood:mlRWAjwjIoCKM3TP@cluster0.5qbblkc.mongodb.net/suppliersDB?retryWrites=true&w=majority&appName=Cluster0/suppliersDB";
 
 // Connect to MongoDB
-mongoose.connect(MONGO_URI, {
+mongoose.connect(url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => {
