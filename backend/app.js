@@ -66,7 +66,10 @@ app.get('/contact_get', async (req, res) => {
         res.status(500).json({ message: 'Error fetching contacts' });
     }
 });
-
+app.get("/",(req,res)=>
+{
+    res.json("Hello");
+})
 
 // Start the server
 const PORT = process.env.PORT || 3000;
